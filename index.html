@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <script src="https://kit.fontawesome.com/cdcbbc5b5e.js" crossorigin="anonymous"></script>
+    <title>YAMAHA CORPORATION</title>
+    <link rel="icon" type="" href="logo/logo.png">
+</head>
+<body>
+    <section>
+        <div class="circle"></div>
+        <div class="circle2"></div>
+        <header>
+            <a href="#"><img src="logo/logo.png" class="logo"></a>
+            <ul class="navbar">
+                <li class="dropdown">
+                        <a class="dropbtn" onclick="document.getElementById('change-text').innerHTML='Home';imgSlider('logo/logo.png');imgSlider2('image/home-bg.png');changeCircleColor('linear-gradient(30deg, black 15%, #FFE5B4, black 100%)')">Home</a>
+                        <div class="dropdown-content">
+                        <a href="#" onclick="let link = document.getElementById('change-link');link.href=('about.html');document.getElementById('change-text').innerHTML='About';imgSlider('logo/logo.png');imgSlider2('logo/logo11.webp');changeCircleColor('linear-gradient(30deg, black 15%, #FFE5B4, black 100%)')">About</a>
+                        <a classhref="#" onclick="let link = document.getElementById('change-link');link.href=('milestone.html');document.getElementById('change-text').innerHTML='Milestone';imgSlider('logo/logo.png');imgSlider2('logo/cop.png');changeCircleColor('linear-gradient(30deg,  black 15%, red, black 100%)')">Milestone</a>
+                        </div>
+                </li>
+                    
+                <li class="dropdown" a href="#" onclick="let link = document.getElementById('change-link');link.href=('gallery.html');document.getElementById('change-text').innerHTML='Gallery';imgSlider('logo/logo.png');imgSlider2('image/gq.png');changeCircleColor('linear-gradient(30deg, black 15%, #FFE5B4, black 100%)')">Gallery</a></li>
+                
+            </ul>
+        
+            
+            <script type="text/javascript" src="legacy.js"></script>
+        </header>
+        
+        <div class="content">
+            <div class="textBox">
+                <a href="#" id="change-link"><img src="logo/fast_bike.png" class="intro">
+                    <h4>YAMAHA<span>MOTORCYCLE</span></h4>
+                    <h2>Explore<span id="change-text">Home</span> </h2>
+                </a>
+            </div>
+            <div class="quote"><p>"Yamaha Motor brings pleasure to millions of people by using ingenuity and enthusiasm <br> to constantly surpass customer expectations, thereby enriching their lives." <br>- Yamaha</p></div>
+        </div>
+        <div class="imgbox">
+            <img src="image/Max.png" alt="History" class="History">
+          
+        </div>
+        <ul class="sci">
+            <li><a href="https://www.facebook.com/ph.yamaha"><img src="logo/facebook.png"></a></li>
+            <li><a href="https://www.instagram.com/yamahaphilippines/"><img src="logo/instagram.png"></a></li> 
+            <li><a href="https://x.com/yamahamotorph?lang=en"><img src="logo/twitter.png"></a></li>
+        </ul>
+    </section>
+</body>
+</html> 

@@ -1,0 +1,350 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html {
+    scroll-behavior: smooth;
+}
+body {
+    background: linear-gradient(30deg, black 15%, rgb(1, 81, 156), black 100%);
+}
+
+.container {
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 300px 0;
+
+}
+
+.tmline .title{
+    font-family: font2;
+    position: absolute;
+    font-size: 40px;
+    font-weight: 500;
+    padding: 0 300px;
+    text-align: center;
+    top: -400px;
+    max-width: 10px;
+}
+.timeline {
+    width: 100%;
+    height: auto;
+    max-width: 1000px;
+    margin: 0 auto;
+    position: relative;
+    bottom: -200px;
+}
+
+.timeline h1{
+    font-family: font2;
+    font-weight: 500px;
+    letter-spacing: 15px;
+}
+.timeline ul {
+    list-style: none;
+}
+.timeline ul li {
+    padding: 20px;
+    background-color: #1e1f22;
+    color: white;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.timeline ul li:last-child {
+    margin-bottom: 0;
+}
+.timeline-content h1 {
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 30px;
+    margin-bottom: 10px;
+}
+.timeline-content p {
+    font-size: 15px;
+    line-height: 30px;
+    font-weight: 300;
+    font-family: 'Courier New', Courier, monospace;
+}
+
+.timeline-content .date {
+    font-size: 13px;
+    font-weight: 300;
+    margin-bottom: 10px;
+    letter-spacing: 2px;
+}
+.timeline-content img {
+    max-width: 460px;
+    max-height: 400px;
+    height: 400px;
+    width: 460px;
+}
+
+@media only screen and (min-width: 768px) {
+    .timeline::before {
+        content: '';
+        position: absolute;
+        height: 100%;
+        width: 2px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: gray;
+    }
+    .timeline ul li {
+        width: 50%;
+        margin-bottom: 50px;
+        position: relative;
+    }
+    .timeline ul li:nth-child(odd) {
+        float: left;
+        clear: right;
+        transform: translateX(-30px);
+        border-radius: 20px 0px 20px 20px;
+    }
+    .timeline ul li:nth-child(even) {
+        float: right;
+        clear: left;
+        transform: translateX(30px);
+        border-radius: 0px 20px 20px 20px;
+    }
+    .timeline ul li::after {
+        content: '';
+        position: absolute;
+        height: 20px;
+        width: 20px;
+        transform: translateX(-50%);
+        background-color: gray;
+        border-radius: 50%;
+        top: 0;
+    }
+    .timeline ul li:nth-child(odd)::after {
+        transform: translate(50%, -50%);
+        right: -30px;
+        
+    }
+    .timeline ul li:nth-child(even)::after {
+        transform: translate(50%, -50%);
+        left: -50px;
+    }
+    .timeline ul li:hover:after {
+        background-color: aqua;
+    }
+    .timeline-content .date {
+        position: absolute;
+        top: -30px;
+    }
+}
+
+header
+{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: 0.6s;
+    z-index: 100000;
+}
+header.sticky
+{
+    padding: 5px 100px;
+    
+}
+header .logo
+{
+    position: relative;
+    max-width: 80px;
+    top: 0;
+    transition: 0.6s;
+    filter: invert(1);
+}
+header ul
+{
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+header ul li
+{
+     list-style: none;
+     top: 0;
+     position: relative;
+     margin: 0 15px;
+     text-decoration: none;
+     letter-spacing: 2px;
+     font-weight: 500px;
+     transition: 0.5s;
+}
+header ul li a
+{
+    display: inline-block;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 1px;
+    text-decoration: none;   
+    font-family: font1;
+    padding: 0 30px 0 50px;
+}
+header.sticky ul li a {
+    color: white;
+}
+
+header a
+{
+    color: white;
+}
+header a:hover
+{   
+    color: gold;
+}
+
+
+@media (max-width:991px) 
+{
+    header
+    {
+        padding: 20px;
+    }
+    header .logo 
+    {
+        max-width: 60px;
+    }
+    header ul
+    {
+        display: none;
+    }
+    .toggle
+    {
+        position: relative;
+        width: 30px;
+        height: 30px;
+        cursor: pointer;
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+        z-index: 11;
+    }   
+    .toggle.active{
+        position: fixed;
+        right: 20px;
+        background-size: 25px;   
+        background-position: center;
+        background-repeat: no-repeat;
+        filter: invert(1);
+    }
+    header ul.navigation.active
+    {
+        position: fixed;
+        top:0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        background: #fff;
+        z-index: 10;
+    }
+    header ul li a
+    {
+        font-size: 1.5em;
+        margin: 5px 0;
+    }
+}
+
+--------dropdown
+
+.dropbtn {
+    text-align:			left;
+    text-decoration:	none;
+	width:				auto;
+}
+.dropdown {
+    display:	inline-block;
+	position:	relative;
+    cursor:     pointer;
+    
+    
+}
+
+.dropdown-content {
+    display: 		    none;
+    position: 			absolute;
+    background-color: 	rgb(107, 83, 77, 0.5);
+    width: 				90%;
+    height:             auto;
+    box-shadow: 		4px 10px 10px rgb(80, 24, 90, 0.3);
+	z-index: 			100;
+    border-radius:      10px;
+    left: 15px;
+    
+}
+
+.dropdown-content a {
+    color: 				white;
+    padding: 			10px 20px 10px 20px;
+    text-decoration: 	none;
+    display: 			block;
+    text-align: 		center;
+	width:				auto;
+	z-index: 			1;
+    font-size:          13px;
+    letter-spacing:     2px;
+    
+}
+.dropdown-content a:hover{
+    background-color: blue;
+    border-radius:      10px;
+}
+.dropdown:hover .dropdown-content {
+    display:	block;
+}
+
+----TABLE
+
+
+.wrapper-main {
+    width: 900px;
+    margin: 0 auto;
+}
+.wrapper-main h1 {
+    font-family: font2;
+    color: white;
+    font-size: 50px;
+    margin-bottom: 30px;
+    letter-spacing: 5px;
+    font-weight: 500;
+    padding-left: 475px;
+}
+table {
+    width: 100%;
+    border: 4px solid #000;
+    border-color: white;
+    color: white;
+}
+th {
+    font-weight: bold;
+    color: yellow;
+    background-color: blue;
+}
+td {
+    border: 1px solid #000;
+}
+.frame {
+    position: relative;
+    max-width: 1200px;
+    padding-left: 130px;
+    margin-bottom: 100px;
+    background-color: #000;
+}
+

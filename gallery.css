@@ -1,0 +1,102 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+
+.grid-gallery .a{
+  text-decoration: none;
+  color: white;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 20px;
+  padding-left: 0px;
+  
+}
+
+body{
+  margin: 0;
+  padding: 0;
+  background: linear-gradient(30deg, black 15%, rgb(1, 115, 221), black 100%);
+  font-family: "Caveat", cursive;
+}
+
+.grid-gallery{
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.grid-gallery .title{
+  color: #ffffff;
+  padding: 90px 0 40px;
+  font-size: 80px;
+  font-weight: 500;
+  font-family: font2;
+}
+
+.grid-gallery .grid{
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+  padding-bottom: 60px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid-gallery .grid-item{
+  width: 33.33%;
+  padding: 30px;
+  display: auto;
+}
+
+.grid-gallery .grid-item .grid-link{
+  display: block;
+  padding: 13px 13px 0 13px;
+  background-color: #ffffff;
+  text-decoration: none;
+}
+
+.grid-gallery .grid-item .grid-img{
+  display: block;
+  width: 100%;
+}
+
+.grid-gallery .grid-item .grid_item-title{
+  position: relative;
+  margin: 0;
+  padding: 22px 10px;
+  color: #707070;
+  background-color: #ffffff;
+  font-size: 20px;
+  line-height: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+
+@media (max-width:900px){
+  .grid-gallery .grid-item{
+    width: 50%;
+  }
+
+  .grid-gallery .title{
+    font-size: 60px;
+  }
+}
+
+@media (max-width:480px){
+  .grid-gallery .grid-item{
+    width: 100%;
+  }
+
+  .grid-gallery .title{
+    font-size: 40px;
+  }
+}

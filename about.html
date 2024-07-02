@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
+    <title> History| About, Biography</title>
+
+    <link rel="stylesheet" href="about.css">
+</head>
+<body>
+    
+    <section class="img-sec">
+        <img src="image/corpp.webp">
+    </section>
+
+    <div class="ab-container" id="back">
+          
+    <section class="hidden">
+        <h1 class="lega">HISTORY</h1>
+
+    </section>
+
+    <section class="hidden">
+        <h1>What is this fandom about?</h1>
+        <p> <span class="cap">T</span>his website is about the legacy that <span>Yamaha Corporation</span> &nbsp;The quality, the craftsmanship, the passion that goes into every single product you create is truly inspiring.
+
+           <br><br><br> I'm constantly amazed by the company's commitment to innovation, education, and community building
+           As a fan, I'm excited to see what the future holds for Yamaha Corporation. I'm confident that you'll continue to push the boundaries of technology, design, and innovation, inspiring to new generations.</p>
+    </section>
+    <div class="swiper mySwiper" class="swipe">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="index.html"><img src="image/aa.jpg"><h3>Home</h3></a></div>
+            <div class="swiper-slide"><a href="#biography"><img src="image/aa.jpg"><h3>Biography</h3></a></div>
+            <div class="swiper-slide"><a href="milestone.html"><img src="image/aa.jpg"><h3>Milestones</h3></a></div>
+            <div class="swiper-slide"><a href="gallery.html"><img src="image/aa.jpg"><h3>Gallery</h3></a></div>
+        </div>
+      </div>
+    </div>
+
+    <!--Biography-->
+    <section class="sec-01" id="biography">
+        <div class="container">
+            <h2 class="main-title"><hr>Biography</h2>
+            <div class="content">
+                <div class="image">
+                    <img src="logo/logo1.webp">
+                </div>
+                <div class="text-box">
+                    <h3>YA-1 Motorcycle</h3>
+                    <p class="text">The first Yamaha motorized product was the YA-1 Motorcycle (125cc, 2-stroke, single-cylinder, street bike). Nicknamed “The Red Dragonfly,” it was produced and sold in Japan. The brand new YA-1 won the first two races it entered that year.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-02">
+        <div class="container">
+            <h3 class="section-title"><hr> The YD1 Motorcycle</h3>
+            <div class="content">
+                <div class="image">
+                    <img src="logo/logo2.webp">
+                </div>
+                <div class="info">
+                    
+                    <p>The first Yamaha Motorcycles sold in the USA were imported by Cooper Motors, an independent distributor. The models were the YD1 (250cc, 2-stroke, twin cylinder, streetbike) and MF-1 (50cc, 2-stroke, single cylinder, streetbike, step-through). Yamaha enters the world of international racing by competing in the Catalina Grand Prix in California, In this first attempt against the world’s seasoned racing machines, Yamaha placed an impressive 6th place. This race marked the first time a Japanese motorcycle raced in the U.S.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="sec-03">
+        <div class="container">
+            <h3 class="section-title"><hr>Toyota 2000GT sports car</h3>
+            <div class="content">
+                <div class="info">
+                    <p>Yamaha collaborates with Toyota to develop and manufacture the Toyota 2000GT sports car. A modified convertible 2000GT was featured in the 1967 James Bond movie “You Only Live Twice.” Yamaha wins its first 250cc class victory at the Daytona Grand Prix.</p>
+                </div>
+                <div class="image">
+                    <img src="logo/logo3.webp">
+                </div>
+            </div>
+            <div class="up-btn">
+                <a href="#back">GO UP</a>
+            </div>
+        </div>
+    </section>
+    
+    <!--Text Animation & Scroll Reveal-->
+    <script>
+        ScrollReveal({
+            reset: true,
+            distance: '60px',
+            duration: 2500, 
+            delay: 400
+        });
+
+        ScrollReveal().reveal('.hidden, .text, .info, .info-2', { delay: 300, origin: 'bottom' });
+        ScrollReveal().reveal('.sec-01 .image, .sec-03 .image, .text-box', { delay: 300, origin: 'top' });
+        ScrollReveal().reveal('.main-title, .sec-02 .image, .section-title, .media-icons', { delay: 500, origin: 'left' });
+        ScrollReveal().reveal('.up-btn', { delay: 500, origin: 'bottom' });
+
+    </script>
+
+    <!--coverflow img-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        var swiper = new Swiper(".mySwiper", {
+          effect: "coverflow",
+          grabCursor: true,
+          centeredSlides: true,
+          slidesPerView: "auto",
+          coverflowEffect: {
+            rotate: 20,
+            stretch: 0,
+            depth: 200,
+            modifier: 1,
+            slideShadows: true,
+          },
+          autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+          }
+        });
+      </script>
+
+</body>
+</html>
